@@ -1,0 +1,47 @@
+.button {
+  width: 100%;
+  border-radius: 10px;
+  color: var(--main-color);
+  border: none;
+  text-transform: uppercase;
+  padding: 15px 15px;
+  font-size: clamp(0.875rem, 0.7452rem + 0.5769vw, 1.25rem);
+  font-family: inherit;
+  transition: all 0.3s ease;
+  margin: 2px 0;
+  flex: 1 0 200px;
+  z-index: 2000;
+  position: relative;
+}
+
+.blue {
+  background: var(--accent-color-blue);
+}
+
+.pink {
+  background: var(--accent-color-pink);
+}
+
+.light {
+  background: var(--light-grey);
+}
+
+.button:hover {
+  opacity: 80%;
+}
+
+.button:active {
+  opacity: 80%;
+  transform: scale(1.02);
+}
+
+.button:focus-visible {
+  border: none;
+  outline: 1px solid var(--grey);
+}
+
+.disabled {
+  pointer-events: none;
+  background: var(--grey);
+  color: var(--main-color);
+}

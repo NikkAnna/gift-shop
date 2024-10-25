@@ -1,0 +1,13 @@
+.title {
+  text-align: center;
+  font-size: clamp(1.25rem, 0.8173rem + 1.9231vw, 2.5rem);
+  color: var(--main-color);
+}
+
+.content {
+  width: clamp(18.75rem, 10.0962rem + 38.4615vw, 43.75rem);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}

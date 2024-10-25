@@ -1,0 +1,30 @@
+.content {
+  background: var(--main-color);
+  width: clamp(18.75rem, 10.0962rem + 38.4615vw, 43.75rem);
+  padding: 70px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  color: var(--accent-color-blue);
+  border-radius: 20px;
+  box-shadow: 14px 13px 16px -3px rgba(17, 17, 17, 0.39);
+}
+
+.title {
+  text-align: center;
+  font-size: clamp(1.25rem, 0.8173rem + 1.9231vw, 2.5rem);
+}
+
+.text {
+  font-size: clamp(0.875rem, 0.7452rem + 0.5769vw, 1.25rem);
+  font-weight: 800;
+  color: var(--light-grey);
+  text-transform: uppercase;
+  align-self: center;
+}
+
+@media screen and (width <= 580px) {
+  .content {
+    padding: 50px 10px;
+  }
+}

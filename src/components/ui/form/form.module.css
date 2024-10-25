@@ -1,0 +1,80 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: clamp(17.5rem, 10.5769rem + 30.7692vw, 37.5rem);
+}
+
+.inputbox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input {
+  border-radius: none;
+  padding: 10px 10px;
+  font-size: clamp(0.875rem, 0.7452rem + 0.5769vw, 1.25rem);
+  border: none;
+  border-bottom: 1px solid var(--accent-color-blue);
+  box-shadow: 4px -2px 4px -3px var(--accent-color-blue);
+}
+
+.input:hover {
+  outline: 1px solid var(--accent-color-blue);
+  border-radius: 10px;
+}
+
+.input:focus-visible {
+  outline: 1px solid var(--accent-color-blue);
+  border-radius: 10px;
+}
+
+.input::placeholder {
+  font-size: clamp(0.625rem, 0.4952rem + 0.5769vw, 1rem);
+}
+
+.inputError {
+  border-bottom: 1px solid var(--accent-color-pink);
+  box-shadow: 4px -2px 4px -3px var(--accent-color-pink);
+}
+
+.inputError:hover {
+  outline: 1px solid var(--accent-color-pink);
+  border-radius: 10px;
+}
+
+.inputError:focus-visible {
+  outline: 1px solid var(--accent-color-pink);
+  border-radius: 10px;
+}
+
+.inputLabel .textInfo {
+  font-size: clamp(0.875rem, 0.7452rem + 0.5769vw, 1.25rem);
+  color: var(--accent-color-blue);
+}
+
+.error {
+  color: var(--accent-color-pink);
+  font-size: clamp(0.625rem, 0.4952rem + 0.5769vw, 1rem);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.button {
+  width: 100%;
+}
+
+@media screen and (width <= 580px) {
+  .input {
+    padding: 5px 5px;
+  }
+
+  .buttons {
+    gap: 10px;
+  }
+}
