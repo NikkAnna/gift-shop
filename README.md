@@ -1,4 +1,4 @@
-# HealthTracker
+# Сервис для покупки подарочных сертификатов
 
 Стек: React, TS, HTML, CSS, Webpack 
 
