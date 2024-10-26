@@ -3,11 +3,11 @@
 :root {
   --bg-gradient: linear-gradient(120deg, #2980b9, #8e44ad);
   --main-color: #fff;
-  --light-color: #f7f2f2;
   --accent-color-blue: #1976d2;
   --accent-color-pink: #f70223;
   --grey: #575757;
   --light-grey: #9b9d9e;
+  --light-color: #e4ebeceb;
 }
 
 *,

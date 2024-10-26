@@ -23,7 +23,13 @@
 }
 
 .light {
-  background: var(--light-grey);
+  background: var(--main-color);
+  outline: 1px solid var(--accent-color-blue);
+  color: var(--accent-color-blue);
+}
+
+.light:hover {
+  background: var(--light-color);
 }
 
 .white {
