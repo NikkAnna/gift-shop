@@ -49,7 +49,7 @@
   border-radius: 10px;
 }
 
-.inputLabel .textInfo {
+.textInfo {
   font-size: clamp(0.875rem, 0.7452rem + 0.5769vw, 1.25rem);
   color: var(--accent-color-blue);
 }
@@ -57,6 +57,12 @@
 .error {
   color: var(--accent-color-pink);
   font-size: clamp(0.625rem, 0.4952rem + 0.5769vw, 1rem);
+}
+
+.postError {
+  font-size: clamp(0.875rem, 0.7452rem + 0.5769vw, 1.25rem);
+  font-weight: 700;
+  color: var(--main-color);
 }
 
 .buttons {

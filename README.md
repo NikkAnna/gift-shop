@@ -1,6 +1,6 @@
 # Сервис для покупки подарочных сертификатов
 
-Стек: React, TS, HTML, CSS, Webpack 
+Стек: React, React Hook Form, TS, MaterialUI, Redux, HTML, CSS, Webpack
 
 Структура проекта:
 - src/ — исходные файлы проекта

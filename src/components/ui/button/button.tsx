@@ -5,11 +5,11 @@ export type TSubmitButtonProps = {
   onClick?: () => void;
   label: string;
   disabled: boolean;
-  color: 'blue' | 'pink' | 'light';
+  color: 'blue' | 'pink' | 'light' | 'white';
   type: 'button' | 'submit';
 };
 
-export const SubmitButton = (props: TSubmitButtonProps) => (
+export const Button = (props: TSubmitButtonProps) => (
   <>
     <div>
       <button
@@ -20,7 +20,8 @@ export const SubmitButton = (props: TSubmitButtonProps) => (
           props.disabled ? styles.disabled : '',
           props.color === 'blue' ? styles.blue : '',
           props.color === 'pink' ? styles.pink : '',
-          props.color === 'light' ? styles.light : ''
+          props.color === 'light' ? styles.light : '',
+          props.color === 'white' ? styles.white : ''
         )}
       >
         {props.label}

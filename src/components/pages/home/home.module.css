@@ -23,6 +23,18 @@
   align-self: center;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.postError {
+  font-size: clamp(0.875rem, 0.7452rem + 0.5769vw, 1.25rem);
+  font-weight: 700;
+  color: var(--main-color);
+}
+
 @media screen and (width <= 580px) {
   .content {
     padding: 50px 10px;

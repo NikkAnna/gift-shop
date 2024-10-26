@@ -6,10 +6,19 @@ import { SuccessPage } from '../pages/success/success';
 
 import styles from './app.module.css';
 import { NotFoundPage } from '../pages/not-found/not-found-page';
+import { useDispatch } from '../../store/store';
+import { getGiftCards } from '../../utils/api';
+import { getGiftsThunk } from '../../store/dataSlice';
 
 const App = () => {
   const navigate = useNavigate();
   const location = useLocation();
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getGiftsThunk());
+  }, []);
 
   return (
     <>

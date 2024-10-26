@@ -3,14 +3,11 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
-
 import { TGiftCard } from '../../../utils/types';
-
-import styles from './select.module.css';
 
 type TSelectProps = {
   label: string;
-  gifts?: TGiftCard[];
+  gifts: TGiftCard[];
   nominal: string;
   setNominal: React.Dispatch<React.SetStateAction<string>>;
 };
@@ -48,11 +45,15 @@ export const SelectInput = (props: TSelectProps) => {
               transition: 'all 0.3s ease'
             }}
           >
-            <MenuItem sx={{ fontFamily: 'IBM PLex Mono' }} value={10}>
-              Ten
-            </MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            {props.gifts.map((gift, index) => (
+              <MenuItem
+                key={index}
+                sx={{ fontFamily: 'IBM PLex Mono' }}
+                value={gift.ID}
+              >
+                {gift.NAME}
+              </MenuItem>
+            ))}
           </Select>
         </FormControl>
       </Box>
