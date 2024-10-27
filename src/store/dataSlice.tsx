@@ -110,7 +110,6 @@ const dataSlice = createSlice({
         (state, action: PayloadAction<TGiftsResponseType>) => {
           state.loader = false;
           state.gifts = action.payload.data.data;
-          console.log(typeof state.gifts[0].ID);
         }
       )
       .addCase(postOrderThunk.pending, (state) => {

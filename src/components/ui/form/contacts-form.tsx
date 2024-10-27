@@ -40,12 +40,6 @@ export const ContactsForm = () => {
   const dispatch = useDispatch();
 
   const onSubmit = (formValue: FormData) => {
-    console.log({
-      ...orderInfo,
-      CLIENTNAME: formValue.ClientName,
-      PHONE: formValue.Phone,
-      EMAIL: formValue.Email
-    });
     dispatch(
       postOrderThunk({
         ...orderInfo,
@@ -78,7 +72,7 @@ export const ContactsForm = () => {
               onChange: (e) => {
                 setFormData({ ...formData, ClientName: e.target.value });
               },
-              value: orderInfo.CLIENTNAME
+              value: formData.ClientName
             })}
             aria-invalid={errors.ClientName ? 'true' : 'false'}
             className={cn(
@@ -86,7 +80,7 @@ export const ContactsForm = () => {
               errors.ClientName ? styles.inputError : ''
             )}
             onKeyDown={(e) => {
-              if (e.key.match(/[^A-Za-zА-Яа-яЁё]/)) return e.preventDefault();
+              if (e.key.match(/[^A-Za-zА-Яа-яЁё ]/)) return e.preventDefault();
             }}
           />
           {errors.ClientName?.type === 'required' && (
@@ -108,6 +102,7 @@ export const ContactsForm = () => {
             maskPlaceholder=''
             type='tel'
             placeholder='(___)___-__-__'
+            value={formData.Phone}
             {...register('Phone', {
               required: true,
               pattern:
@@ -141,7 +136,7 @@ export const ContactsForm = () => {
               pattern: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
               onChange: (e) =>
                 setFormData({ ...formData, Email: e.target.value }),
-              value: orderInfo.EMAIL
+              value: formData.Email
             })}
             aria-invalid={errors.Email ? 'true' : 'false'}
             className={cn(styles.input, errors.Email ? styles.inputError : '')}
